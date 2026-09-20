@@ -1,0 +1,13 @@
+# SafeEmbodiedFM-V3 Requirements
+# Core implementation is NumPy-only for safety-critical control systems.
+# `cvxpy` is an *optional* dependency that enables the CBF-QP solver
+# in `safe_fm_v3.qp_solver` (added in R2). Install it explicitly if you
+# need the exact-QP reference implementation; the default CBF code path
+# in `cbf_synthesizer.py` uses a fast projected-gradient step that does
+# not require CVXPY.
+
+numpy>=1.21.0
+pytest>=7.0.0
+
+# Optional: enables solve_cbf_qp()
+# pip install cvxpy
