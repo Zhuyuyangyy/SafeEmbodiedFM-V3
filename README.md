@@ -241,6 +241,7 @@ safe_fm_v3/
 ├── __init__.py              # Package initialization
 ├── lyapunov_verifier.py    # Lyapunov stability verification
 ├── cbf_synthesizer.py       # Control barrier function synthesis
+├── qp_solver.py             # CVXPY-based CBF-QP reference solver (R2)
 ├── runtime_monitor.py # Real-time safety monitoring
 ├── safe_planner.py          # Constrained trajectory planning
 └── collision_detector.py    # Point cloud collision detection
@@ -252,6 +253,12 @@ Run the test suite:
 
 ```bash
 pytest tests/test_safe.py -v
+```
+
+Run the R2 QP solver tests:
+
+```bash
+pytest tests/test_qp_solver.py -v
 ```
 
 Run specific test classes:
@@ -279,6 +286,8 @@ pytest tests/test_safe.py::TestRuntimeMonitor -v
 MIT License
 
 ## References
+
+Full citations for the methods implemented here are listed in [CITATIONS.md](CITATIONS.md).
 
 - [Control Barrier Functions: Theory and Applications](link)
 - [Control Lyapunov Function](link)
